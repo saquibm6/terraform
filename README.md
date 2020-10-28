@@ -16,4 +16,6 @@ To get started
 6. terraform plan
 7. terraform apply
 
+The IAC is written in a fashion which makes the infra Higly available and fault taulorent with self healing. This also employs cloudwatch alerts and logs for logging and monitoring purposes.
+
 And you are done! :)

@@ -1,0 +1,37 @@
+# Define the public subnets
+resource "aws_subnet" "public-subnet" {
+vpc_id = aws_vpc.default.id
+cidr_block = var.public_subnet_2a_cidr
+availability_zone = "us-east-2a"
+tags = {
+Name = "Web Public Subnet 1"
+}
+}
+
+resource "aws_subnet" "public-subnet2" {
+vpc_id = aws_vpc.default.id
+cidr_block = var.public_subnet_2b_cidr
+availability_zone = "us-east-2b"
+tags = {
+Name = "Web Public Subnet 2"
+}
+}
+
+# Define the private subnets
+resource "aws_subnet" "private-subnet" {
+vpc_id = aws_vpc.default.id
+cidr_block = var.private_subnet_2a_cidr
+availability_zone = "us-east-2a"
+tags = {
+Name = "App Private Subnet 1"
+}
+}
+
+resource "aws_subnet" "private-subnet2" {
+vpc_id = aws_vpc.default.id
+cidr_block = var.private_subnet_2b_cidr
+availability_zone = "us-east-2b"
+tags = {
+Name = "App Private Subnet 2"
+}
+}
